@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  resources :microposts
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
 
-  root "application#welcome_home"
+  # root "application#welcome_home"
+  
+  # Set user index directly as root
+  root 'users#index'
 end
